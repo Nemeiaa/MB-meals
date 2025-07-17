@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e1e; /* Dark background */
+  color: #f5f5f5; /* Light text for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 24px;
+  color: #ffa500; /* Orange for a cuisine-inspired theme */
+}
+
+#area-select {
+  display: block;
+  margin: 24px auto 32px auto;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ffa500; /* Orange border */
+  background: #333; /* Dark background for dropdown */
+  color: #f5f5f5; /* Light text */
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+}
+
+.meal {
+  background: #2a2a2a; /* Dark card background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  padding: 16px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.meal:hover {
+  box-shadow: 0 4px 16px rgba(255, 165, 0, 0.5); /* Orange glow on hover */
+  cursor: pointer;
+}
+
+.meal img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.meal h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #ffa500; /* Orange text for meal titles */
+  text-align: center;
+  word-break: break-word;
+}
+
+#meal-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent backdrop */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+#modal-content {
+  background: #2a2a2a; /* Dark modal background */
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 800px; /* Increased width for side-by-side layout */
+  width: 90%;
+  text-align: left; /* Align text to the left */
+  position: relative;
+  color: #f5f5f5; /* Light text for readability */
+  display: flex; /* Use flexbox for side-by-side layout */
+  gap: 16px; /* Add space between image and text */
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+#modal-content img {
+  width: 50%; /* Image takes half the width */
+  border-radius: 8px;
+}
+
+#modal-content div {
+  flex: 1; /* Text content takes the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ffa500; /* Orange close button */
+  color: #1e1e1e; /* Dark text for contrast */
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.view-details {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #ffa500; /* Orange button */
+  color: #1e1e1e; /* Dark text for contrast */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-details:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}
